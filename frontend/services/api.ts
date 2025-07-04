@@ -1,15 +1,16 @@
 import axios from "axios";
 import { ContactMessage, NewContactMessage } from '../types/ContactMessage';
-
-const API_BASE_URL = "http://localhost:8000/api";
+import { Project } from '../types/Project';
+import { About } from '../types/About';
+import { API_BASE_URL } from '../src/config';
 
 export const getProjects = async () => {
-  const response = await axios.get(`${API_BASE_URL}/projects/`);
+  const response = await axios.get<Project>(`${API_BASE_URL}/projects/`);
   return response.data;
 };
 
 export const getAbout = async () => {
-  const response = await axios.get(`${API_BASE_URL}/about/`);
+  const response = await axios.get<About>(`${API_BASE_URL}/about/`);
   return response.data;
 };
 
