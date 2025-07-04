@@ -58,7 +58,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React app running on localhost
 ]
 
-# CORS_ALLOW_CREDENTIALS = True  # Uncomment if you need to allow all credentials
+CORS_ALLOW_CREDENTIALS = True  # Uncomment if you need to allow all credentials
 
 ROOT_URLCONF = "myportfolio_backend.urls"
 
