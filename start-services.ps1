@@ -29,7 +29,6 @@ try {
     
     Write-Host "Backend iniciado correctamente" -ForegroundColor Green
     Set-Location ..
-    Start-Process "http://localhost:8000"
 } catch {
     Write-Host "Error al iniciar Backend: $($_.Exception.Message)" -ForegroundColor Red
     Set-Location ..
@@ -41,7 +40,8 @@ try {
     Set-Location .\frontend
     Write-Host "Iniciando aplicacion React..." -ForegroundColor Cyan
     Start-Process -FilePath "npm.cmd" -ArgumentList "start" -NoNewWindow
-    
+    Start-Process "http://localhost:8000"
+
     Write-Host "Frontend iniciado correctamente" -ForegroundColor Green
     Set-Location ..
 } catch {

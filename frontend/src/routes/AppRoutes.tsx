@@ -1,7 +1,7 @@
 // frontend/src/routes/AppRoutes.tsx
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import About from '../components/About'
+import About from '../components/About/About'
 // import Projects from '../components/Projects';
 // import Experience from '../components/Experience';
 // import Contact from '../components/Contact';
