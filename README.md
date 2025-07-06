@@ -291,3 +291,4 @@ To allow cross-origin requests to your Django API, you can use the `django-cors-
         CORS_ALLOW_ALL_ORIGINS = True
     ```
 
+## Frontend Notes

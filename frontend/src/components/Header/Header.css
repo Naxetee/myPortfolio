@@ -30,13 +30,15 @@
 .logo:active {
     transform: scale(0.95);
 }
+
 .category-selectors {
+    width: fit-content;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
     align-self: stretch;
     flex-shrink: 0;
