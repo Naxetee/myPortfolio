@@ -19,7 +19,7 @@ function App() {
     <Router>
       <div className="app-container">
         <Header />
-        <div>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <h1>API Testing</h1>
           <p>Check the browser console (F12) to see the API test results!</p>
 

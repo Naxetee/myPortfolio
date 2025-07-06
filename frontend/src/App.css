@@ -1,3 +1,38 @@
+:root {
+  /* Fonts */
+  /* Category Selector Style */
+  --menustyle-font-family: OpenSans-SemiBold, sans-serif;
+  --menustyle-font-size: 16px;
+  --menustyle-line-height: normal;
+  --menustyle-font-weight: 500;
+  --menustyle-font-style: normal;
+  /* Button Style */
+  --buttonstyle-font-family: LeagueSpartan-Bold, sans-serif;
+  --buttonstyle-font-size: 36px;
+  --buttonstyle-line-height: normal;
+  --buttonstyle-font-weight: 700;
+  --buttonstyle-font-style: normal;
+  /* Title Style */
+  --titlestyle-font-family: LeagueSpartan-Black, sans-serif;
+  --titlestyle-font-size: 40px;
+  --titlestyle-line-height: normal;
+  --titlestyle-font-weight: 900;
+  --titlestyle-font-style: normal;
+  /* Text Style */
+  --textstyle-font-family: OpenSans-Regular, sans-serif;
+  --textstyle-font-size: 24px;
+  --textstyle-line-height: normal;
+  --textstyle-font-weight: 400;
+  --textstyle-font-style: normal;
+  /* Aux Text Style */
+  /* Used for smaller text, such as in the footer */
+  --auxtextstyle-font-family: OpenSans-Regular, sans-serif;
+  --auxtextstyle-font-size: 14px;
+  --auxtextstyle-line-height: normal;
+  --auxtextstyle-font-weight: 400;
+  --auxtextstyle-font-style: normal;
+}
+
 .app-container {
   min-height: 100vh;
   min-width: 100vw;
@@ -16,9 +51,11 @@
 [data-theme='dark'] {
   --bg: #1e1e1e;
   --text: #ffffff;
+  --text-hover: #aaa;
 }
 
 [data-theme='light'] {
   --bg: #f5f5f5;
   --text: #1e1e1e;
+  --text-hover: #777;
 }
