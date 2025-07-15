@@ -4,8 +4,22 @@
 
 Write-Host "=== Iniciando servicios del Portfolio ===" -ForegroundColor Green
 
-# 1. Iniciar PostgreSQL
-Write-Host "`n1. Iniciando PostgreSQL..." -ForegroundColor Yellow
+# 1. Iniciar Frontend
+Write-Host "`n1. Iniciando Frontend..." -ForegroundColor Yellow
+try {
+    Set-Location .\frontend
+    Write-Host "Iniciando aplicacion React..." -ForegroundColor Cyan
+    Start-Process -FilePath "npm.cmd" -ArgumentList "start" -NoNewWindow
+
+    Write-Host "Frontend iniciado correctamente" -ForegroundColor Green
+    Set-Location ..
+} catch {
+    Write-Host "Error al iniciar Frontend: $($_.Exception.Message)" -ForegroundColor Red
+    Set-Location ..
+}
+
+# 2. Iniciar PostgreSQL
+Write-Host "`n2. Iniciando PostgreSQL..." -ForegroundColor Yellow
 try {
     & pg_ctl start -D 'C:\Program Files\PostgreSQL\17\data'
     Write-Host "PostgreSQL iniciado correctamente" -ForegroundColor Green
@@ -15,8 +29,8 @@ try {
     Write-Host "Verifica que PostgreSQL este instalado y el path sea correcto" -ForegroundColor Yellow
 }
 
-# 2. Iniciar Backend (con entorno virtual)
-Write-Host "`n2. Iniciando Backend..." -ForegroundColor Yellow
+# 3. Iniciar Backend (con entorno virtual)
+Write-Host "`n3. Iniciando Backend..." -ForegroundColor Yellow
 try {
     # Activar entorno virtual
     Write-Host "Activando entorno virtual..." -ForegroundColor Cyan
@@ -31,21 +45,6 @@ try {
     Set-Location ..
 } catch {
     Write-Host "Error al iniciar Backend: $($_.Exception.Message)" -ForegroundColor Red
-    Set-Location ..
-}
-
-# 3. Iniciar Frontend
-Write-Host "`n3. Iniciando Frontend..." -ForegroundColor Yellow
-try {
-    Set-Location .\frontend
-    Write-Host "Iniciando aplicacion React..." -ForegroundColor Cyan
-    Start-Process -FilePath "npm.cmd" -ArgumentList "start" -NoNewWindow
-    Start-Process "http://localhost:8000"
-
-    Write-Host "Frontend iniciado correctamente" -ForegroundColor Green
-    Set-Location ..
-} catch {
-    Write-Host "Error al iniciar Frontend: $($_.Exception.Message)" -ForegroundColor Red
     Set-Location ..
 }
 

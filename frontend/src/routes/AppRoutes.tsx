@@ -13,6 +13,7 @@ const AppRoutes: React.FC = () => (
     {/* <Route path="/projects" element={<Projects />} /> */}
     {/* <Route path="/experience" element={<Experience />} /> */}
     {/* <Route path="/contact" element={<Contact />} /> */}
+    <Route path="/*" element={<div>404 - Página no encontrada</div>} />
 </Routes>
 );
 

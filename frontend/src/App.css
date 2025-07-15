@@ -2,7 +2,7 @@
   /* Fonts */
   /* Category Selector Style */
   --menustyle-font-family: OpenSans-SemiBold, sans-serif;
-  --menustyle-font-size: 16px;
+  --menustyle-font-size: 18px;
   --menustyle-line-height: normal;
   --menustyle-font-weight: 500;
   --menustyle-font-style: normal;
@@ -31,6 +31,10 @@
   --auxtextstyle-line-height: normal;
   --auxtextstyle-font-weight: 400;
   --auxtextstyle-font-style: normal;
+
+  /* Transitions */
+  --color-transition: 1s;
+  --bg-transition: 1s;
 }
 
 .app-container {
@@ -38,13 +42,15 @@
   min-width: 100vw;
   display: flex;
   flex-direction: column;
+  align-items: center;    
+  justify-content: flex-start;
   gap: 50px;
 
   /* Color settings */
 
   background-color: var(--bg);
   color: var(--text);
-  transition: background 1s, color 1s
+  transition: background var(--bg-transition), color var(--color-transition)
 }
 
 
@@ -52,10 +58,18 @@
   --bg: #1e1e1e;
   --text: #ffffff;
   --text-hover: #aaa;
+  --shadow: rgba(255, 252, 252, 0.15);
+  --bg-neutral: #404040;
+  --bg-neutral-hover: #606060;
+  --bg-neutral-active: #808080;
 }
 
 [data-theme='light'] {
-  --bg: #f5f5f5;
+  --bg: #dddddd;
   --text: #1e1e1e;
   --text-hover: #777;
+  --shadow: rgba(0, 0, 0, 0.15);
+  --bg-neutral: #bababa;
+  --bg-neutral-hover: #808080;
+  --bg-neutral-active: #606060;
 }
