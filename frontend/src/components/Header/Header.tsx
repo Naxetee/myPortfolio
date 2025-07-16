@@ -2,9 +2,12 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 import "./Header.css";
+import SocialSelector from "../SocialSelector/SocialSelector";
+
+
 
 const Header: React.FC = () => {
-const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const hamburgerRef = useRef<HTMLDivElement>(null);
 
@@ -45,41 +48,7 @@ const [dropdownOpen, setDropdownOpen] = useState(false);
             Contact
           </Link>
           <div className="line"></div>
-          <div className="social">
-            <a
-              href="https://github.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="social-icon"
-                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg"
-                alt="GitHub"
-              />
-            </a>
-            <a
-              href="https://facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="social-icon"
-                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg"
-                alt="Facebook"
-              />
-            </a>
-            <a
-              href="https://linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="social-icon"
-                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg"
-                alt="LinkedIn"
-              />
-            </a>
-          </div>
+          <SocialSelector />          
           <div className="line"></div>
           <ThemeSwitcher />
         </div>
@@ -110,41 +79,7 @@ const [dropdownOpen, setDropdownOpen] = useState(false);
             <Link className="menustyle" to="/contact" onClick={handleDropdown}>
               Contact
             </Link>
-            <div className="social">
-              <a
-                href="https://github.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="social-icon"
-                  src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg"
-                  alt="GitHub"
-                />
-              </a>
-              <a
-                href="https://facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="social-icon"
-                  src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg"
-                  alt="Facebook"
-                />
-              </a>
-              <a
-                href="https://linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="social-icon"
-                  src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg"
-                  alt="LinkedIn"
-                />
-              </a>
-            </div>
+            <SocialSelector />
             <ThemeSwitcher />
           </div>
         )}

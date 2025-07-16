@@ -127,33 +127,3 @@
   transform: rotate(90deg) scale(1, 1);
   transition: color var(--color-transition);
 }
-
-.social {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  height: 22px;
-}
-
-.social-icon {
-    align-self: stretch;
-    flex-shrink: 0;
-    width: 22px;
-    height: auto;
-    position: relative;
-    overflow: visible;
-    aspect-ratio: 1;
-    transition: transform 0.2s;
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.social-icon:active {
-    transform: scale(0.95);
-}

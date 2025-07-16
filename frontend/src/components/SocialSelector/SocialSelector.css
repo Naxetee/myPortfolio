@@ -1,0 +1,32 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-around;
+  flex-shrink: 0;
+  height: 22px;
+}
+
+.social-icon {
+    align-self: stretch;
+    flex-shrink: 0;
+    width: 22px;
+    height: auto;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+    transition: transform 0.2s, color var(--color-transition); /* Añade color a la transición */
+    color: var(--text); /* Aquí defines el color de los iconos */
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: var(--text-hover); /* Color al hacer hover */
+}
+
+.social-icon:active {
+    transform: scale(0.95);
+    color: var(--text); /* Color al hacer click */
+}

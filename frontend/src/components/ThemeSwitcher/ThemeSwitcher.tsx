@@ -7,7 +7,7 @@ const ThemeSwitcher: React.FC = () => {
   return (
     <>
       <label
-        style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+        style={{ display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}
       >
         <span style={{ marginRight: 8 }}>{theme === "dark" ? "🌙" : "☀️"}</span>
         <input
