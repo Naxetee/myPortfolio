@@ -11,6 +11,7 @@ import {
   FaTwitter,
   FaInstagram,
 } from "react-icons/fa";
+import Loader from "../Loader/Loader";
 
 const iconMap: Record<string, any> = {
   github: FaGithub,
@@ -44,7 +45,7 @@ useEffect(() => {
     <>
       <div className="social">
       {loading ? (
-        <span>Loading...</span>
+        <Loader />
       ) : (
         socialLinks.map(({ name, icon_url, profile_url }) => {
           const Icon = iconMap[name.toLowerCase()];
