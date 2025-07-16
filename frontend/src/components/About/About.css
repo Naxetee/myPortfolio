@@ -1,0 +1,30 @@
+
+.titlestyle {
+    height: fit-content;
+    width: fill;
+    margin: 10px 50px;
+    color: var(--text);
+    text-align: center;
+    font-family: var(--titlestyle-font-family, "LeagueSpartan-Black", sans-serif);
+    font-size: var(--titlestyle-font-size, 40px);
+    font-weight: var(--titlestyle-font-weight, 900);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    transition: color var(--color-transition), transform 0.2s;
+}
+
+.textstyle {
+    color: var(--text);
+    margin: 10px 50px;
+    font-family: var(--textstyle-font-family, "OpenSans-Regular", sans-serif);
+    font-size: var(--textstyle-font-size, 24px);
+    font-weight: var(--textstyle-font-weight, 400);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: justify;
+    text-decoration: none;
+    transition: color var(--color-transition), transform 0.2s;
+}

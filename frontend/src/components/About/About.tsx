@@ -1,13 +1,40 @@
-import React from 'react';
+import React from "react";
+import { useState, useEffect } from "react";
+import { getAbout } from "../../services/About";
+import "./About.css";
+import type { About as AboutType } from "../../types/About";
+import Loader from "../Loader/Loader";
 
-const About: React.FC = () => (
+export default function About() {
+  const [about, setAbout] = useState<AboutType[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchAbout = async () => {
+      try {
+        const data = await getAbout();
+        console.log("About Me data:", data);
+        setAbout(data);
+      } catch (error) {
+        console.error("Error fetching About Me:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAbout();
+  }, []);
+
+  return (
     <>
-        <h2>About Me</h2>
-        <p>
-            Hello! I'm a passionate developer with experience in building modern web applications.
-            I enjoy learning new technologies and solving challenging problems.
+      <h2 className="titlestyle">About Me</h2>
+      {loading ? (
+        <Loader />
+      ) : (
+        <p className="textstyle" style={{ whiteSpace: "pre-line" }}>
+          {(about[0]?.about_me || "").replace(/\\n/g, "\n")}
         </p>
+      )}
     </>
-);
-
-export default About;
+  );
+}

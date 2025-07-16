@@ -8,6 +8,7 @@ import {
 } from "./testing";
 import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./components/Header/Header";
+import About from "./components/About/About";
 // Importa tus componentes de sección aquí
 // import About from './components/About';
 // import Projects from './components/Projects';
@@ -17,8 +18,9 @@ import Header from "./components/Header/Header";
 function App() {
   return (
     <Router>
+      <Header />
       <div className="app-container">
-        <Header />
+        <About />
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <h1>API Testing</h1>
           <p>Check the browser console (F12) to see the API test results!</p>

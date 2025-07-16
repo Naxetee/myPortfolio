@@ -14,6 +14,10 @@
     justify-content: space-around;
     flex-wrap: wrap;
     align-content: center;
+
+    background-color: var(--bg);
+  color: var(--text);
+  transition: background var(--bg-transition), color var(--color-transition)
 }
 .logo {
     background: var(--bg-neutral, #404040);

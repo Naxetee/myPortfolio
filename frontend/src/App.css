@@ -14,13 +14,13 @@
   --buttonstyle-font-style: normal;
   /* Title Style */
   --titlestyle-font-family: LeagueSpartan-Black, sans-serif;
-  --titlestyle-font-size: 40px;
+  --titlestyle-font-size: 30px;
   --titlestyle-line-height: normal;
   --titlestyle-font-weight: 900;
   --titlestyle-font-style: normal;
   /* Text Style */
   --textstyle-font-family: OpenSans-Regular, sans-serif;
-  --textstyle-font-size: 24px;
+  --textstyle-font-size: 18px;
   --textstyle-line-height: normal;
   --textstyle-font-weight: 400;
   --textstyle-font-style: normal;
@@ -38,13 +38,13 @@
 }
 
 .app-container {
+  box-sizing: border-box;
   min-height: 100vh;
-  min-width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;    
   justify-content: flex-start;
-  gap: 50px;
 
   /* Color settings */
 
@@ -65,7 +65,7 @@
 }
 
 [data-theme='light'] {
-  --bg: #dddddd;
+  --bg: #eeeeee;
   --text: #1e1e1e;
   --text-hover: #777;
   --shadow: rgba(0, 0, 0, 0.15);
