@@ -42,6 +42,7 @@ try {
     Start-Process -FilePath "python" -ArgumentList "manage.py", "runserver" -NoNewWindow
     
     Write-Host "Backend iniciado correctamente" -ForegroundColor Green
+    Start-Process "http://localhost:8000"
     Set-Location ..
 } catch {
     Write-Host "Error al iniciar Backend: $($_.Exception.Message)" -ForegroundColor Red
