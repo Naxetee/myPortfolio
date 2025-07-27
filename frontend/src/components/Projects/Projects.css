@@ -1,0 +1,26 @@
+.titlestyle {
+    height: fit-content;
+    width: fill;
+    margin: 10px 50px;
+    color: var(--text);
+    text-align: center;
+    font-family: var(--titlestyle-font-family, "LeagueSpartan-Black", sans-serif);
+    font-size: var(--titlestyle-font-size, 40px);
+    font-weight: var(--titlestyle-font-weight, 900);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    transition: color var(--color-transition), transform 0.2s;
+}
+
+.projects-container {
+    display: flex;
+    margin: 10px 50px;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}

@@ -9,6 +9,7 @@ import {
 import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./components/Header/Header";
 import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
 // Importa tus componentes de sección aquí
 // import About from './components/About';
 // import Projects from './components/Projects';
@@ -21,6 +22,7 @@ function App() {
       <Header />
       <div className="app-container">
         <About />
+        <Projects />
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <h1>API Testing</h1>
           <p>Check the browser console (F12) to see the API test results!</p>
