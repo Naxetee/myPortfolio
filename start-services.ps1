@@ -34,7 +34,11 @@ Write-Host "`n3. Iniciando Backend..." -ForegroundColor Yellow
 try {
     # Activar entorno virtual
     Write-Host "Activando entorno virtual..." -ForegroundColor Cyan
-    & .\backend\venv\Scripts\Activate.ps1
+    & .\backend\venv_backend\Scripts\Activate.ps1
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "Error al activar el entorno virtual. Verifica que el entorno exista." -ForegroundColor Red
+        exit 1
+    }
     
     # Cambiar al directorio backend e iniciar Django
     Set-Location .\backend
